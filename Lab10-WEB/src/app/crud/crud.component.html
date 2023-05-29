@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="crud.component.css">
+<head>
+  <title>Reservas del Polideportivo Tecsup</title>
+</head>
+<body>
+  <h1>Reservas del Polideportivo Tecsup</h1>
+  
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Código de Alumno</th>
+          <th>Nombre</th>
+          <th>Código de Carrera</th>
+          <th>Campo</th>
+          <th>Horario</th>
+          <!-- <th>Acciones</th> -->
+        </tr>
+      </thead>
+        <tbody id="datos">
+          <tr *ngFor="let producto of listProductos">
+              <td>{{ producto.codigoAlumno }}</td>
+              <td>{{ producto.nombre }}</td>
+              <td>{{ producto.codigoCarrera }}</td>
+              <td>{{ producto.campo}}</td>
+              <td>{{ producto.fecha}}</td>
+              <td>
+               <!--  <button class="btn-editar">Editar Reserva</button>
+                <button class="btn-eliminar">Eliminar Reserva</button> -->
+              </td>
+          </tr>
+      </tbody>
+            <!-- Otras filas -->
+    </table>
+    
+    <div class="formulario">
+      <h2>Agregar Reserva</h2>
+      <form>
+        <input type="text" placeholder="Código de Alumno" required>
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Código de Carrera" required>
+        <input type="text" placeholder="Campo" required>
+        <input type="text" placeholder="Horario" required>
+        <input type="submit" value="Agregar">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
